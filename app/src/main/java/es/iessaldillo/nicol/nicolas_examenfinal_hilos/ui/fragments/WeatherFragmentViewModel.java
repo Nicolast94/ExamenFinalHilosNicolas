@@ -54,15 +54,9 @@ public class WeatherFragmentViewModel extends ViewModel {
     }
 
     public String devolverHora (int sunrise_sunset){
-        SimpleDateFormat format = new SimpleDateFormat("HH:mm");
-        long time = (long)sunrise_sunset;
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(sunrise_sunset);
-        try {
-            return String.format("%s",format.parse(calendar.getTime().toString()));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return "";
+        return String.format("%s:%s",calendar.get(Calendar.HOUR),calendar.get(Calendar.MINUTE));
+
     }
 }

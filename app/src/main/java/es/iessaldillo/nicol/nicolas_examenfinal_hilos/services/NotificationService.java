@@ -25,7 +25,7 @@ public class NotificationService extends JobIntentService {
 
     @Override
     protected void onHandleWork(@NonNull Intent intent) {
-        Notification notification = new NotificationCompat.Builder(this, "Lamlataf")
+        Notification notification = new NotificationCompat.Builder(this, "9001")
                 .setSmallIcon(R.drawable.ic_wb_sunny_black_24dp)
                 .setContentTitle("El tiempo en " + notifCity)
                 .setContentText(notifWeatherDescription)
